@@ -10,7 +10,6 @@ def format_phone_number(func):
 
     return decorator
 
-
 @format_phone_number
 def sanitize_phone_number(phone):
     new_phone = (
@@ -42,7 +41,7 @@ def input_error(func):
 
 
 @input_error
-def hello(lst):
+def hello():
     return "How can I help you?"
 
 
@@ -65,7 +64,7 @@ def show_phone(lst):
 
 
 @input_error
-def show_all_list(lst):
+def show_all_list():
     if len(number_dictionary) == 0:
         return "Phone dictionary is empty"
     text = ""
@@ -75,11 +74,11 @@ def show_all_list(lst):
 
 
 @input_error
-def good_bye(lst):
+def good_bye():
     return "Good bye!"
 
 
-def help(lst):
+def help():
     explanation = """Commands:
     1. Start work, enter the command: hello
     2. Add new contact, enter the command: add 'name' 'phone number'
